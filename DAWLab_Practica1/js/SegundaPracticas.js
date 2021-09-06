@@ -1,26 +1,39 @@
 var biblioteca = new Array();
 
-function GuradarLibro(obj) {
+function GuardarLibro() {
     var Libro = new Object();
-
+    let IMG = new FileReader();
+    IMG.readAsDataURL(document.getElementById('img').files[0]);
+    
     Libro.ID = document.getElementById('txtID').value;
-    Llibro.titulo = document.getElementById('txttitulo').value;
-    Llibro.nombre = document.getElementById('txtnombre').value;
-    Llibro.apellido = document.getElementById('txtapellido').value;   
-    Llibro.genero = document.getElementById('txtgenero').value;
-    Llibro.pais = document.getElementById('txtpais').value;
-    Llibro.precio = document.getElementById('txtprecio').value;
-    Llibro.imagen = document.getElementById('img').value; 
-    biblioteca.push(libro); 
+    Libro.titulo = document.getElementById('txttitulo').value;
+    Libro.nombre = document.getElementById('txtnombre').value;
+    Libro.apellido = document.getElementById('txtapellido').value;   
+    Libro.genero = document.getElementById('txtgenero').value;
+    Libro.pais = document.getElementById('txtpais').value;
+    Libro.precio = document.getElementById('txtprecio').value;
+    Libro.imagen = IMG; 
+    
+    
+    biblioteca.push(Libro); 
+    
+    document.getElementById('formulario').reset();
     MostrarL();
 
-    
+
 }
 
 function MostrarL() {
-   
+    
+    
+
         for (var e in biblioteca) {
-            document.getElementById('img').innerHTML = biblioteca[e].imagen;
+            
+            biblioteca[e].imagen.onload = ()=>{
+                document.getElementById('imagen').src = biblioteca[e].imagen.result;
+             }
+             
+            
             document.getElementById('Autor').innerHTML = biblioteca[e].nombre + biblioteca[e].apellido ;
             document.getElementById('Libro').innerHTML = biblioteca[e].ID + biblioteca[e].titulo;
             document.getElementById('Precio').innerHTML = biblioteca[e].precio;

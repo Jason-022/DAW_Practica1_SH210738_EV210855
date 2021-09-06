@@ -1,7 +1,16 @@
 div{
     margin-top: 5px;
 }
-table tr td:hover{
+/* table tr td:hover{
     background: black;
     color: white;
+} */
+.CVer{
+    background: green !important;
+}
+.CAma{
+    background: yellow !important;
+}
+table{
+    margin-top: 1%;
 }
