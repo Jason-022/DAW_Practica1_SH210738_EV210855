@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="js/PrimerEjercicio.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-   
+   <link rel="stylesheet" href="css/CssPract1.css">
 
 </head>
 
@@ -16,26 +16,21 @@
     <nav></nav>
     <section>
         <div class="row g-3">
-            <div class="col-sm-7">
-                <label class="form-control" >Ingrese la dimensión de la matriz</label>
+            <div class="col-sm">
+                <label class="form-label" >Ingrese la dimensión de la matriz</label>
             </div>
             <div class="col-sm">
-                <input type="text" class="form-control" placeholder="State" aria-label="State">
+                <input type="text" class="form-control" id="filas" placeholder="Filas" aria-label="State">
               </div>
             <div class="col-sm">
-              <input type="text" class="form-control" placeholder="State" aria-label="State">
+              <input type="text" class="form-control" id="columnas" placeholder="Colmuna" aria-label="State">
             </div>
             <div class="col-ms-1">
-                <input type="button" class="col-2 btn btn-dark" value="Enviar" onclick="Llenar_Matriz()"> 
+                <input type="button" class="col-2 btn btn-dark" value="Crear" onclick="Llenar_Matriz()"> 
             </div>
           </div>
-
-       
-        <div class="row form-control">
-            <input type="button" class="col-2 btn btn-dark" value="Mostrar" onclick="Mostrar()">
-        </div> 
         
-        <div id="tabla"></div>
+        <table id="tabla" class="table table-bordered "></table>
 
 
     </section>
