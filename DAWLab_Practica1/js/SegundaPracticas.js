@@ -1,3 +1,4 @@
+
 var biblioteca = new Array();
 
 function GuardarLibro() {
@@ -19,6 +20,7 @@ function GuardarLibro() {
     
     document.getElementById('formulario').reset();
     MostrarL();
+     
 
 
 }
@@ -40,5 +42,5 @@ function MostrarL() {
         }
         
     
-   
+    console.log(biblioteca);
 }
