@@ -1,12 +1,4 @@
-function readImage (input) {
-    if (input.files && input.files[0]) {
-      var reader = new FileReader();
-      reader.onload = function (e) {
-          $('#pho').attr('src', e.target.result); // Renderizamos la imagen
-      }
-      reader.readAsDataURL(input.files[0]);
-    }
-  }
+
 var biblioteca = new Array();
 
 function GuardarLibro() {
