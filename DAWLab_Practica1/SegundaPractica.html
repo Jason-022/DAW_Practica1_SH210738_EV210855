@@ -15,30 +15,40 @@
         <div class="container">Registrar Libros</div>
         <hr>
        <section>
-        <form action="#">
-            <input class="form-control" type="text" placeholder="Libro ID" name="" id="txtID">
-            <input class="form-control" type="text" name="" placeholder="Titulo" id="txttitulo">
-            <input class="form-control" type="text" name="" placeholder="Nombre" id="txtnombre">
-            <input class="form-control" type="text" name="" placeholder="Apellido" id="txtapellido">
-            <input class="form-control" type="text" name="" placeholder="Genero" id="txtgenero">
-            <input class="form-control" type="text" name="" placeholder="Nacionalidad del autor" id="txtpais">
-            <input class="form-control" type="text" name="" placeholder="Precio" id="txtprecio">
-            <input class="form-control" type="file" placeholder="Subir imagen para el libro" id="img">
+        <form action="#" enctype="multipart/form-data">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">Libro ID:</span>
+                    <input id="txtID" type="text" class="form-control" aria-describedby="basic-addon3">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">Titulo:</span>
+                    <input id="txttitulo" type="text" class="form-control" aria-describedby="basic-addon3">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">Nombre del autor:</span>
+                    <input id="txtnombre" type="text" class="form-control" aria-describedby="basic-addon3">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">Apellido de autor:</span>
+                    <input id="txtapellido" type="text" class="form-control" aria-describedby="basic-addon3">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">Categoria:</span>
+                    <input id="txtgenero" type="text" class="form-control" aria-describedby="basic-addon3">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">Precio:</span>
+                    <input id="txtprecio" type="text" class="form-control" aria-describedby="basic-addon3">
+                  </div>
+            <input class="form-control" type="file" placeholder="Subir imagen para el libro" id="img" multiple>
+            <input type="reset" class="btn btn-primary">
             <input style="margin-top: 5px;" class="btn btn-primary" type="button" value="Guardar" onclick="GuardarLibro()">
         </form>
         <hr>
-
-            <div class="form-control">
-            <div id="img">                
-            </div>
-            <label>Autor</label>
-            <label id="Autor"></label>
-            <label>Titulo</label>
-            <label id="Libro"></label>
-            <label>Precio</label>
-            <label id="Precio"></label>         
+        <img src="" alt="">
+        <div class="container">
+            <div class="row" id="datos"></div>
         </div>
-
 
 
        </section> 

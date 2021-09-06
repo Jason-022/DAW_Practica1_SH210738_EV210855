@@ -1,31 +1,43 @@
+function readImage (input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function (e) {
+          $('#pho').attr('src', e.target.result); // Renderizamos la imagen
+      }
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
 var biblioteca = new Array();
 
-function GuradarLibro(obj) {
-    var Libro = new Object();
+function GuardarLibro() {
+    var libro = new Object();
 
-    Libro.ID = document.getElementById('txtID').value;
-    Llibro.titulo = document.getElementById('txttitulo').value;
-    Llibro.nombre = document.getElementById('txtnombre').value;
-    Llibro.apellido = document.getElementById('txtapellido').value;   
-    Llibro.genero = document.getElementById('txtgenero').value;
-    Llibro.pais = document.getElementById('txtpais').value;
-    Llibro.precio = document.getElementById('txtprecio').value;
-    Llibro.imagen = document.getElementById('img').value; 
+    libro.id = document.getElementById('txtID').value;
+    libro.titulo = document.getElementById('txttitulo').value;
+    libro.nombre = document.getElementById('txtnombre').value;
+    libro.apellido = document.getElementById('txtapellido').value;   
+    libro.genero = document.getElementById('txtgenero').value;
+    libro.precio = document.getElementById('txtprecio').value;
+    libro.imagen = document.getElementById('img').value;
     biblioteca.push(libro); 
     MostrarL();
+     
 
     
 }
 
 function MostrarL() {
-   
-        for (var e in biblioteca) {
-            document.getElementById('img').innerHTML = biblioteca[e].imagen;
-            document.getElementById('Autor').innerHTML = biblioteca[e].nombre + biblioteca[e].apellido ;
-            document.getElementById('Libro').innerHTML = biblioteca[e].ID + biblioteca[e].titulo;
-            document.getElementById('Precio').innerHTML = biblioteca[e].precio;
-        }
-        
+    grid="";
+    for (var e in biblioteca) {
+        grid+="<div class='col'>";
+        grid+="<img src='' id='pho' width='60px' height='60px'>";
+        grid+="<p>Nombre del autor: "+biblioteca[e].nombre +" "+ biblioteca[e].apellido+"</p>";
+        grid+="<p>Titulo: "+biblioteca[e].titulo+"</p>";
+        grid+="<p>Precio: "+biblioteca[e].precio+"</p>";
+        grid+="</div>";
+    }
+       
+    document.getElementById('datos').innerHTML = grid;
     
-   
+    console.log(biblioteca);
 }
