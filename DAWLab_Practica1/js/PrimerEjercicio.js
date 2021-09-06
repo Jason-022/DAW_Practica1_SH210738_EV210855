@@ -20,18 +20,19 @@ function Llenar_Matriz() {
                 table += "<tr>";
                 for ( j = 0; j < y; j++)
                 {
-                   
-                    table += "<td>"+tabla[i,j]+"</td>";
-                    max = Math.max(tabla[i,j]);
-                    min = Math.min(tabla[i,j]);
+                   data = tabla[i,j];
+                    table += "<td>"+data+"</td>";
+                    
                     
                 }
+            
                 table += "</tr>";
             }
-            
+            max = Math.max(data);
+            min = Math.min(data);
             document.getElementById('tabla').innerHTML=table;
-            document.getElementById('mayor').innerHTML=max;
-            document.getElementById('menor').innerHTML=min;
+            document.getElementById('mayor').innerHTML="El numero mayor es: "+max;
+            document.getElementById('menor').innerHTML="El numero menor es: "+min;
 
 }
     
