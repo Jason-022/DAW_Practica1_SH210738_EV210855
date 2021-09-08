@@ -5,3 +5,17 @@
    border-radius: 1%; 
     
 }
+header{
+   background: #F7E018;
+}
+header h2{
+   position: absolute;
+   left: 40%;
+   top: 5%;
+   font-size: 50px;
+}
+div h2{
+   position: absolute;
+   left: 20%;
+   top: 17%;
+}

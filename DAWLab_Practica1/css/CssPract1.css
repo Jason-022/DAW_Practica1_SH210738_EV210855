@@ -1,8 +1,17 @@
 *{
-    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-family: 'IBM Plex Sans Arabic';
 }
 div{
     margin-top: 5px;
+}
+header{
+    background: #F7E018;
+}
+header h2{
+    position: absolute;
+    left: 40%;
+    top: 5%;
+    font-size: 50px;
 }
 /* table tr td:hover{
     background: black;
@@ -16,4 +25,10 @@ div{
 }
 table{
     margin-top: 1%;
+}
+
+#mayor,
+#menor{
+    font-size: 20px;
+    color:darkcyan
 }
